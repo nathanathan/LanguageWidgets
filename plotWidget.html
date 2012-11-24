@@ -363,7 +363,7 @@ function getTag(node, tag, callback){
 }
 $(function() {
     var interpId = $.url().param('interpId'); 
-    $.getJSON($.url().param('parentUrl') + '/interpretations/' + interpId, function(data) {
+    $.getJSON($.url().param('serverUrl') + '/interpretations/' + interpId, function(data) {
         console.log(JSON.stringify(data.root));
         //Why does this work in the interpreter?
         //var mpt = data.root.interpretations[0][0];

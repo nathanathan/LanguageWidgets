@@ -151,7 +151,7 @@ Clicking on a value would show its derivations and the values they rely on.
     
     $(function() {
         var interpId = $.url().param('interpId');
-        $.getJSON('../interpretations/' + interpId, function(data) {
+        $.getJSON($.url().param('serverUrl') + '/interpretations/' + interpId, function(data) {
             console.log(JSON.stringify(data.root));
             //TODO: Where should the evaluation start?
             evaluate(data.root.interpretations[0][0], function(interpretation) {
